@@ -1,7 +1,6 @@
 function palindrome(str) {
   // Remove any symbols or spaces. Change string to all lower case.
   let word = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-  let count = 0;
   // Find the number of characters to the middle of word. 
   // If word is even, middle is exactly half the length of the word. 
   // If word is odd, middle does not include the center character. 
