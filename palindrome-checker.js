@@ -1,21 +1,20 @@
 function palindrome(str) {
-    // Remove any symbols or spaces. Change string to all lower case.
-    let word = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-    let count = 0;
-    // Find the number of characters to the middle of word. 
-    // If word is even, middle cuts the word exactly in half. 
-    // If word is odd, the length of middle does not include the middle character. 
-    let middle = Math.floor(word.length/2); 
-    // Compare the first character with the last, the second with the second-last, etc., all the way to the middle. 
-    // For each match, increase count by one.
-    for (let i = 0; i < middle; i++) {
-      if (word[i] === word[word.length - 1 - i]) {
-        count++;
-      }
+  // Remove any symbols or spaces. Change string to all lower case.
+  let word = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+  let count = 0;
+  // Find the number of characters to the middle of word. 
+  // If word is even, middle is exactly half the length of the word. 
+  // If word is odd, middle does not include the center character. 
+  let middle = Math.floor(word.length/2); 
+  // Compare the first character with the last, the second with the second-last, etc., up to the middle. 
+  // If there is a mismatch, immediately return false. Otherwise, word must be a palindrome, so return true.
+  for (let i = 0; i < middle; i++) {
+    if (word[i] !== word[word.length - 1 - i]) {
+      return false;
     }
-    // If word is a palindrome, count equals middle. 
-    return count === middle;
   }
+  return true;
+}
   
   
   palindrome("eye"); // true
