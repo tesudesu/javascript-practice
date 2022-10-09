@@ -9,7 +9,7 @@ function telephoneCheck(str) {
         countNum++;
       }
     }
-    // Filter out any string that doesn't contain 10 or 11 digits.
+    // The string must contain 10 or 11 digits.
     if (countNum !== 10 && countNum !== 11) {
       return false;
     }
@@ -17,7 +17,7 @@ function telephoneCheck(str) {
     if (countNum === 11 && str[0] != 1) {
       return false;
     }
-    // If the string contains a dash, the dash must appear in the format of XXX-XXXX.
+    // If the string contains a dash, the most basic format it must appear in is XXX-XXXX.
     if (/-/.test(str)) {
       if (!regexDashNum.test(str)) {
         return false;
