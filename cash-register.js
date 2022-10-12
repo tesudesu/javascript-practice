@@ -27,7 +27,7 @@ function checkCashRegister(price, cash, cid) {
     // If there are not enough $100 bills for the change required but there is at least one $100 bill in the register, push to changeArr the total amount in $100 bills there is in the register. 
     // After calculating the change in $100 bills, save the remaining change in changeAfter100. 
     // If there are no $100 bills in the register or change is less than $100, save the change directly in changeAfter100. 
-    // changeAfter100 will be passed as the starting amount for the next biggest bill type ($20).
+    // changeAfter100 will be passed as the starting amount for the next biggest currency unit ($20 bill).
     
     if (change >= 100 && cid[8][1] >= (Math.floor(change/100) * 100)) {
       changeArr.push(["ONE HUNDRED", Math.floor(change/100) * 100]);
@@ -39,7 +39,7 @@ function checkCashRegister(price, cash, cid) {
       changeAfter100 = change;
     }
   
-    // Repeat above logic for each bill type. 
+    // Repeat above logic for each currency unit. 
     if (changeAfter100 >= 20 && cid[7][1] >= (Math.floor(changeAfter100/20) * 20)) {
       changeArr.push(["TWENTY", Math.floor(changeAfter100/20) * 20]);
       changeAfter20 = Math.round((changeAfter100 % 20) * 100)/100;
