@@ -24,4 +24,19 @@ Full project instructions: https://www.freecodecamp.org/learn/javascript-algorit
 **Cash Register:** 
 Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument. Outputs different things depending on whether there is enough funds in the drawer for the change or whether exact change can be given.
 
+An example of a cid array:
+```
+[
+  ["PENNY", 1.01],
+  ["NICKEL", 2.05],
+  ["DIME", 3.1],
+  ["QUARTER", 4.25],
+  ["ONE", 90],
+  ["FIVE", 55],
+  ["TEN", 20],
+  ["TWENTY", 60],
+  ["ONE HUNDRED", 100]
+]
+```
+
 Full project instructions: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/cash-register
